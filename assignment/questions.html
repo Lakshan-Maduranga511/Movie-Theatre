@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question - Film Theatre</title>
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <header>
+        <h1>Ask Question</h1>
+      
+    </header>
+    <main>
+        
+            <h2>Have a question? please ask us!</h2>
+            <form class="question-form" method="post" name="question-form" onSubmit="return validateForm();">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" >
+
+                <label for="email">Your Email:</label>
+                <input type="text" id="text" name="email" >
+
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="8"></textarea>
+                  
+                <button type="submit" class="button submit-button" name="submit">Submit</button>
+               
+               
+            </form>
+             
+        
+        
+       
+    </main>
+     <button class="button back-button" onclick="goBack()">Back</button>
+    <footer>
+        <p>&copy; 2024 Film Theatre</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+           var name = document.getElementById("name").value;
+		   var email = document.getElementById("text").value;
+		   var question = document.getElementById("question").value;
+		   
+		  if (name.trim() === "" || email.trim() === "" || question.trim() === ""){
+			alert("Please fill in all fields.");
+			return false;
+		  }
+		  else {
+			alert("Thank you. We will get an answer to your question soon.");
+			return true;
+		  }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

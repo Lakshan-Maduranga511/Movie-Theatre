@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    display: none;
+    z-index: 5;
+    transition: width 0.10s, left 0.10s; 
+}
+
+
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.menu-icon {
+    cursor: pointer; 
+    font-size: 24px;
+    position: fixed; 
+    top: 18px; 
+    left: 10px; 
+    color: #fff;
+    margin-left: 30px;
+}
+
+.navibar {
+    height: 80px;
+    width: 100%;
+    background-color: #333;
+    position: fixed;
+}
+
+.navibar ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 1px;
+}
+
+.navibar ul li {
+    display: inline-block;
+    line-height: 20px;
+    margin: 0 18px;
+    padding: 2px 22px; 
+}
+
+
+.navibar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    line-height: 25px; 
+}
+
+.navibar ul li a:hover {
+    background-color: #555;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+	color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-container input[type=text] {
+    padding: 15px; 
+    font-size: 18px;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    background-color: transparent;
+    width: 50%; 
+    color: #fff; 
+}
+
+.search-container button {
+    padding: 15px 20px; 
+    font-size: 18px;
+    background-color: #333;
+    border: 3px solid #fff; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+
+.search-container {
+    width: 90%; 
+    margin: 300px auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-container input[type=text]::placeholder {
+    color: #fff ;
+}
+
+
+

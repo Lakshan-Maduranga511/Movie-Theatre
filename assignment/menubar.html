@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page| CINEHOUSE</title>
+    <link rel="stylesheet" href="menubar.css">
+   <style>
+        body {
+            background-image: url('images/main.jpg'); 
+        }
+    </style>
+</head>
+<body>
+   <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2>Menu</h2>
+        <span class="close-icon" onclick="toggleSidebar()">✖</span>
+    </div>
+    <ul>
+        <li><a href="event&promotion.html">Special Event & Promotions</a></li>
+        <li><a href="askquestion.html">Ask Question</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+    </ul>
+</div>
+ <div class="navibar" id="navibar">
+         <h1>
+        <ul>
+        <li><a href="#"></a></li>
+       <li class="logo"><img src="images/Premier4.png" alt="Film Theatre Name Logo"></li>
+
+             <li><a href="login.html">Buy Tickets</a></li>
+            <li><a href="login.html">Login</a></li>
+             <li><a href="register.html">Register</a></li>
+            
+        </ul>
+     
+<div class="menu-icon" onclick="toggleSidebar()">
+    &#9776; 
+</div>
+ </div>
+<div class="search-container">
+    <form action="result.php" method="POST">
+        <input type="text" placeholder="your film search here" name="search">
+        <button type="submit">&#128269;</button>
+    </form>
+</div>
+
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.style.display = sidebar.style.display === "none" ? "block" : "none";
+    }
+	 
+	  
+</script>
+
+
+
+</body>
+</html>
+

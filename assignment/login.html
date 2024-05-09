@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="label">Login</h1>
+        <form class="login_form" action="login.php" method="post" name="form" onsubmit="return validateLoginForm();">
+            <div class="Uname">Username</div>
+            <input type="text" name="username">
+            
+            <div class="Pword">Password</div>
+            <input type="password" name="password">
+            
+            <button type="submit" name="Login">Login</button>
+            <p class="register-link">If you have not created an account:- <a href="register.html">Click Here</a></p>
+        </form>
+    </div>    
+    <script>
+        function validateLoginForm() {
+            var username = document.forms["form"]["username"].value;
+            var password = document.forms["form"]["password"].value;
+
+            if (username === "" || password === "") {
+                alert("Please fill in all fields for login.");
+                return false; 
+            } else if (username === "admin" && password === "1234") {
+                window.location.href = "adminmenu.html";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+

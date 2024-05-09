@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Upload</title>
+    <link rel="stylesheet" href="filmupload.css">
+</head>
+<body>
+    <header>
+        <h1>Upload New Film</h1>
+    </header>
+    <main>
+        <form action="filmupload.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm();" name="form1">
+            <div class="form-group">
+                <label for="filmName">Film Name:</label>
+                <input type="text" id="filmName" name="filmName" >
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="8" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate">
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate">
+            </div>
+            <div class="form-group">
+                <label for="timeSlot">Time Slot:</label>
+                <select id="timeSlot" name="timeSlot">
+                    <option value="10:30">10:30 AM</option>
+                    <option value="14:30">2:30 PM</option>
+                    <option value="17:30">5:30 PM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Upload Film">
+               <input type="button" value="Back" onclick="window.location.href = 'menubar.html'">
+
+            </div>
+        </form>
+        <script>
+            function validateForm() {
+                var name = document.forms["form1"]["filmName"].value;
+                var description = document.forms["form1"]["description"].value;
+                var startDate = document.forms["form1"]["startDate"].value;
+                var endDate = document.forms["form1"]["endDate"].value;
+                var timeSlot = document.forms["form1"]["timeSlot"].value;
+                var image = document.forms["form1"]["image"].value;
+
+                if (name === "" || description === "" || startDate === "" || endDate === "" || timeSlot === "" || image === "") {
+                    alert("Please fill in all details.");
+                    return false;
+                }
+            }
+        </script>
+    </main>
+   
+</body>
+</html>
